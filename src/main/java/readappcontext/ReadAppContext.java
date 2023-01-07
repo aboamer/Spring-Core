@@ -3,6 +3,7 @@ package readappcontext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import readappcontext.beans.ClassRoom;
 import readappcontext.beans.Entitlement;
+import readappcontext.beans.service.TestQualifierService;
 import readappcontext.config.AppConfig;
 
 public class ReadAppContext {
@@ -23,6 +24,9 @@ public class ReadAppContext {
         ClassRoom classRoom = context.getBean(ClassRoom.class);
 
         System.out.println(classRoom.getTeachers());
+
+        TestQualifierService testQualifierService = context.getBean(TestQualifierService.class);
+        testQualifierService.produce();
 
         context.close();
 

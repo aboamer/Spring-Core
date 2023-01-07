@@ -9,6 +9,10 @@ import readappcontext.beans.Entitlement;
 @ComponentScan(basePackages = "readappcontext.beans")
 public class AppConfig {
 
+    /**
+     *
+     * a use case for bean over component is to make an existing 3rd party class available to ur spring context
+     */
     @Bean(name="entitlement")
     public Entitlement getEntitlement() {
 

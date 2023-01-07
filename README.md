@@ -29,3 +29,8 @@
 2. Integration.
 3. Mock
 
+## Bean scopes
+How long a bean lives? How many instances? How is it shared?
+
+Singleton (default) - prototype - request - session - global session
+
